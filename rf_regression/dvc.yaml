@@ -1,0 +1,23 @@
+params:
+- params.yaml
+metrics:
+- metrics.json
+plots:
+- plots/metrics:
+    x: step
+- plots/custom/predicted_vs_actual_price.json:
+    template: scatter
+    x: actual
+    y: predicted
+    title: Predicted price vs. Actual price
+artifacts:
+  flightprices:
+    path: ../data/airline_price_data.csv
+    type: dataset
+    desc: Flights price prediction dataset
+    labels:
+    - regression
+    - prices
+  flight-price-prediction:
+    path: ../model_dir/flight-price-prediction.joblib
+    type: model
