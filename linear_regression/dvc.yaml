@@ -1,0 +1,15 @@
+params:
+- params.yaml
+metrics:
+- metrics.json
+plots:
+- plots/metrics:
+    x: step
+artifacts:
+  flightprices:
+    path: ../data/airline_price_data.csv
+    type: dataset
+    desc: Flights price prediction dataset
+    labels:
+    - regression
+    - prices
